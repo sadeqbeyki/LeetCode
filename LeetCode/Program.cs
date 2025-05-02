@@ -1,8 +1,81 @@
-﻿
+﻿using LeetCode;
+
+
+#region AddTwoNumbers
+
+
+// create link list
+
+ListNode l1 = new ListNode(2);
+l1.next = new ListNode(4);
+l1.next.next = new ListNode(3);
+
+ListNode l2 = new ListNode(5);
+l2.next = new ListNode(6);
+l2.next.next = new ListNode(4);
+
+//  create Solution
+Solution solution = new Solution();
+
+//  call AddTwoNumbers
+ListNode result = solution.AddTwoNumbers(l1, l2);
+
+// result
+ListNode currentResult = result;
+Console.WriteLine("Result:");
+while (currentResult != null)
+{
+    Console.Write(currentResult.val + " ");
+    currentResult = currentResult.next;
+}
+Console.WriteLine();
+
+// ex2
+ListNode l3 = new ListNode(0);
+ListNode l4 = new ListNode(0);
+ListNode result2 = solution.AddTwoNumbers(l3, l4);
+Console.WriteLine("Result 2:");
+ListNode currentResult2 = result2;
+while (currentResult2 != null)
+{
+    Console.Write(currentResult2.val + " ");
+    currentResult2 = currentResult2.next;
+}
+Console.WriteLine();
+
+//  ex3
+ListNode l5 = new(9);
+l5.next = new ListNode(9);
+l5.next.next = new ListNode(9);
+l5.next.next.next = new ListNode(9);
+l5.next.next.next.next = new ListNode(9);
+l5.next.next.next.next.next = new ListNode(9);
+l5.next.next.next.next.next.next = new ListNode(9);
+
+ListNode l6 = new ListNode(9);
+l6.next = new ListNode(9);
+l6.next.next = new ListNode(9);
+l6.next.next.next = new ListNode(9);
+
+ListNode result3 = solution.AddTwoNumbers(l5, l6);
+Console.WriteLine("Result 3:");
+ListNode currentResult3 = result3;
+while (currentResult3 != null)
+{
+    Console.Write(currentResult3.val + " ");
+    currentResult3 = currentResult3.next;
+}
+Console.WriteLine();
+
+Console.ReadKey(); 
+
+
+
+#endregion
+
 
 
 #region twoSum
-using LeetCode;
 
 TwoSum twosum = new TwoSum();
 
