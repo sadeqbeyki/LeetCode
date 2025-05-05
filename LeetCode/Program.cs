@@ -1,5 +1,30 @@
 ﻿using LeetCode;
 
+#region PalindromeChecker
+Palindrome Palindrome = new Palindrome();
+Console.WriteLine("please imput a number:");
+int number;
+
+// بررسی معتبر بودن ورودی
+while (!int.TryParse(Console.ReadLine(), out number))
+{
+    Console.WriteLine("input number is not valid, please input a valid number.");
+}
+
+bool result = Palindrome.IsPalindrome(number);
+
+if (result)
+{
+    Console.WriteLine($"{number} is a Palindrome number.");
+}
+else
+{
+    Console.WriteLine($"{number} is'nt a Palindrome number.");
+}
+
+Console.WriteLine("Push enter to Exit");
+Console.ReadLine();
+#endregion
 
 #region AddTwoNumbers
 
@@ -18,10 +43,10 @@ l2.next.next = new ListNode(4);
 Solution solution = new Solution();
 
 //  call AddTwoNumbers
-ListNode result = solution.AddTwoNumbers(l1, l2);
+ListNode listNode = solution.AddTwoNumbers(l1, l2);
 
 // result
-ListNode currentResult = result;
+ListNode currentResult = listNode;
 Console.WriteLine("Result:");
 while (currentResult != null)
 {
@@ -67,13 +92,11 @@ while (currentResult3 != null)
 }
 Console.WriteLine();
 
-Console.ReadKey(); 
+Console.ReadKey();
 
 
 
 #endregion
-
-
 
 #region twoSum
 
