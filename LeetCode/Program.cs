@@ -1,7 +1,37 @@
 ﻿using LeetCode;
 
+#region LongestSubstring   
+LongestSubstring longestSubString = new LongestSubstring();
+
+// مثال 1
+string s1 = "abcabcbb";
+int result1 = longestSubString.LengthOfLongestSubstring(s1);
+Console.WriteLine($"longest String without repeat for \"{s1}\": {result1}");
+
+// مثال 2
+string s2 = "bbbbb";
+int result2 = longestSubString.LengthOfLongestSubstring(s2);
+Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s2}\": {result2}");
+
+// مثال 3
+string s3 = "pwwkew";
+int result3 = longestSubString.LengthOfLongestSubstring(s3);
+Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s3}\": {result3}");
+
+// مثال‌های بیشتر (اختیاری)
+string s4 = "";
+int result4 = longestSubString.LengthOfLongestSubstring(s4);
+Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s4}\": {result4}");
+
+string s5 = "au";
+int result5 = longestSubString.LengthOfLongestSubstring(s5);
+Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s5}\": {result5}");
+
+Console.ReadKey(); // برای نگه داشتن پنجره کنسول باز
+#endregion
+
 #region PalindromeChecker
-Palindrome Palindrome = new Palindrome();
+Palindrome Palindrome = new();
 Console.WriteLine("please imput a number:");
 int number;
 
@@ -40,10 +70,10 @@ l2.next = new ListNode(6);
 l2.next.next = new ListNode(4);
 
 //  create Solution
-Solution solution = new Solution();
+TwoNumbers twoNum = new TwoNumbers();
 
 //  call AddTwoNumbers
-ListNode listNode = solution.AddTwoNumbers(l1, l2);
+ListNode listNode = twoNum.AddTwoNumbers(l1, l2);
 
 // result
 ListNode currentResult = listNode;
@@ -58,9 +88,9 @@ Console.WriteLine();
 // ex2
 ListNode l3 = new ListNode(0);
 ListNode l4 = new ListNode(0);
-ListNode result2 = solution.AddTwoNumbers(l3, l4);
+ListNode listNode2 = twoNum.AddTwoNumbers(l3, l4);
 Console.WriteLine("Result 2:");
-ListNode currentResult2 = result2;
+ListNode currentResult2 = listNode2;
 while (currentResult2 != null)
 {
     Console.Write(currentResult2.val + " ");
@@ -82,9 +112,9 @@ l6.next = new ListNode(9);
 l6.next.next = new ListNode(9);
 l6.next.next.next = new ListNode(9);
 
-ListNode result3 = solution.AddTwoNumbers(l5, l6);
+ListNode listNode3 = twoNum.AddTwoNumbers(l5, l6);
 Console.WriteLine("Result 3:");
-ListNode currentResult3 = result3;
+ListNode currentResult3 = listNode3;
 while (currentResult3 != null)
 {
     Console.Write(currentResult3.val + " ");
