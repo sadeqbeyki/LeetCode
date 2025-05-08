@@ -2,32 +2,32 @@
 {
     public double FindMedianSortedArrays(int[] nums1, int[] nums2)
     {
-        int m = nums1.Length;
-        int n = nums2.Length;
+        int nums1Length = nums1.Length;
+        int nums2Length = nums2.Length;
 
-        if (m > n)
+        if (nums1Length > nums2Length)
         {
             return FindMedianSortedArrays(nums2, nums1); // Ensure nums1 is the shorter array
         }
 
         int low = 0;
-        int high = m;
-        int halfLen = (m + n + 1) / 2;
+        int high = nums1Length;
+        int targetLeftHalfLen = (nums1Length + nums2Length + 1) / 2;
 
         while (low <= high)
         {
             int partitionX = (low + high) / 2;
-            int partitionY = halfLen - partitionX;
+            int partitionY = targetLeftHalfLen - partitionX;
 
             int maxLeftX = (partitionX == 0) ? int.MinValue : nums1[partitionX - 1];
-            int minRightX = (partitionX == m) ? int.MaxValue : nums1[partitionX];
+            int minRightX = (partitionX == nums1Length) ? int.MaxValue : nums1[partitionX];
 
             int maxLeftY = (partitionY == 0) ? int.MinValue : nums2[partitionY - 1];
-            int minRightY = (partitionY == n) ? int.MaxValue : nums2[partitionY];
+            int minRightY = (partitionY == nums2Length) ? int.MaxValue : nums2[partitionY];
 
             if (maxLeftX <= minRightY && maxLeftY <= minRightX)
             {
-                if ((m + n) % 2 == 0)
+                if ((nums1Length + nums2Length) % 2 == 0)
                 {
                     return (double)(Math.Max(maxLeftX, maxLeftY) + Math.Min(minRightX, minRightY)) / 2;
                 }
