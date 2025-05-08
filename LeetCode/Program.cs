@@ -1,5 +1,35 @@
 ﻿using LeetCode;
 
+
+#region  Median of Two Sorted Arrays
+
+
+MedianOfTwoSortedArrays median = new();
+
+// Example 1
+int[] nums1_1 = { 1, 3 };
+int[] nums2_1 = { 2 };
+Console.WriteLine($"Median of [{string.Join(",", nums1_1)}] and [{string.Join(",", nums2_1)}] is: {median.FindMedianSortedArrays(nums1_1, nums2_1)}");
+
+// Example 2
+int[] nums1_2 = { 1, 2 };
+int[] nums2_2 = { 3, 4 };
+Console.WriteLine($"Median of [{string.Join(",", nums1_2)}] and [{string.Join(",", nums2_2)}] is: {median.FindMedianSortedArrays(nums1_2, nums2_2)}");
+
+// Additional test cases
+int[] nums1_3 = { };
+int[] nums2_3 = { 1 };
+Console.WriteLine($"Median of [{string.Join(",", nums1_3)}] and [{string.Join(",", nums2_3)}] is: {median.FindMedianSortedArrays(nums1_3, nums2_3)}");
+
+int[] nums1_4 = { 2 };
+int[] nums2_4 = { };
+Console.WriteLine($"Median of [{string.Join(",", nums1_4)}] and [{string.Join(",", nums2_4)}] is: {median.FindMedianSortedArrays(nums1_4, nums2_4)}");
+
+int[] nums1_5 = { 1, 5 };
+int[] nums2_5 = { 2, 3, 4 };
+Console.WriteLine($"Median of [{string.Join(",", nums1_5)}] and [{string.Join(",", nums2_5)}] is: {median.FindMedianSortedArrays(nums1_5, nums2_5)}");
+#endregion
+
 #region LongestSubstring   
 LongestSubstring longestSubString = new LongestSubstring();
 
