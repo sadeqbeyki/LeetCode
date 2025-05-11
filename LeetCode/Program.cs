@@ -1,5 +1,29 @@
 ﻿using LeetCode;
+using System;
 
+#region ArrayHelper     
+Console.Write("Please enter the elements of the first array with spaces: ");
+string input1 = Console.ReadLine();
+int[] array1 = input1.Split(' ').Select(int.Parse).ToArray();
+
+// گرفتن ورودی آرایه دوم از کاربر
+Console.Write("Please enter the elements of the first array with spaces: ");
+string input2 = Console.ReadLine();
+int[] array2 = input2.Split(' ').Select(int.Parse).ToArray();
+
+// ادغام دو آرایه با استفاده از متد arrayhelper
+int[] mergedarray = ArrayHelper.MergeArrays(array1, array2);
+Console.WriteLine($"Merged array: {ArrayHelper.ArrayToString(mergedarray)}");
+
+// مرتب کردن آرایه ادغام شده با استفاده از متد arrayhelper
+ArrayHelper.SortArray(mergedarray);
+Console.WriteLine($"Sorted array: {ArrayHelper.ArrayToString(mergedarray)}");
+
+// پیدا کردن و نمایش عدد میانی
+double med = ArrayHelper.FindMedian(mergedarray);
+Console.WriteLine($"Median Number: {med}");
+
+#endregion
 
 #region  Median of Two Sorted Arrays
 
@@ -41,21 +65,21 @@ Console.WriteLine($"longest String without repeat for \"{s1}\": {result1}");
 // مثال 2
 string s2 = "bbbbb";
 int result2 = longestSubString.LengthOfLongestSubstring(s2);
-Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s2}\": {result2}");
+Console.WriteLine($"longest String without repeat for \"{s2}\": {result2}");
 
 // مثال 3
 string s3 = "pwwkew";
 int result3 = longestSubString.LengthOfLongestSubstring(s3);
-Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s3}\": {result3}");
+Console.WriteLine($"longest String without repeat for \"{s3}\": {result3}");
 
 // مثال‌های بیشتر (اختیاری)
 string s4 = "";
 int result4 = longestSubString.LengthOfLongestSubstring(s4);
-Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s4}\": {result4}");
+Console.WriteLine($"longest String without repeat for \"{s4}\": {result4}");
 
 string s5 = "au";
 int result5 = longestSubString.LengthOfLongestSubstring(s5);
-Console.WriteLine($"طولانی‌ترین زیررشته بدون تکرار برای \"{s5}\": {result5}");
+Console.WriteLine($"longest String without repeat for \"{s5}\": {result5}");
 
 Console.ReadKey(); // برای نگه داشتن پنجره کنسول باز
 #endregion
