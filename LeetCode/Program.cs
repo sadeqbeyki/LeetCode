@@ -1,6 +1,18 @@
 ﻿using LeetCode;
 using System;
 
+#region Longest Common prefix
+var solution = new LongestCommon();
+
+Console.WriteLine(solution.LongestCommonPrefix(new string[] { "flower", "flotter", "flighter" }));
+
+Console.WriteLine(solution.LongestCommonPrefix(new string[] { "dog", "racecar", "car" }));
+
+
+
+
+#endregion
+
 #region ArrayHelper     
 Console.Write("Please enter the elements of the first array with spaces: ");
 string input1 = Console.ReadLine();
