@@ -8,7 +8,7 @@ Console.WriteLine(solution.LongestCommonPrefix(new string[] { "flower", "flotter
 
 Console.WriteLine(solution.LongestCommonPrefix(new string[] { "dog", "racecar", "car" }));
 
-
+Console.WriteLine(solution.LongestCommonSuffix(new string[] { "flower", "flotter", "flighter" }));
 
 
 #endregion

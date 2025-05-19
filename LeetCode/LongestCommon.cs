@@ -28,6 +28,24 @@ internal class LongestCommon
         return prefix;
     }
 
+    public string LongestCommonSuffix(string[] strs)
+    {
+        if (strs == null || strs.Length == 0)
+            return "";
 
+        string suffix = strs[0];
+
+        for (int j = 1; j < strs.Length; j++)
+        {
+            while (!strs[j].EndsWith(suffix))
+            {
+                if (suffix.Length == 0)
+                    return "";
+                suffix = suffix.Substring(1);
+            }
+        }
+
+        return $"the longest common suffix is \"{suffix}\"";
+    }
 
 }
