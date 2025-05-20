@@ -1,6 +1,14 @@
 ﻿using LeetCode;
 using System;
 
+#region Roman Numerals
+var romanNumerals = new RomanNumerals();
+
+Console.WriteLine(romanNumerals.RomanToInt("III"));      // 3
+Console.WriteLine(romanNumerals.RomanToInt("LVIII"));    // 58
+Console.WriteLine(romanNumerals.RomanToInt("MCMXCIV"));  // 1994
+#endregion
+
 #region Longest Common prefix
 var solution = new LongestCommon();
 
